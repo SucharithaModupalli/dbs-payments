@@ -1,0 +1,58 @@
+<h2 style="text-align: center">Payment works!!</h2>
+ <form [formGroup]="customerform" (ngSubmit)="collectData()">
+   <label>Booking Date</label> &nbsp;&nbsp;
+    <input type="date" name="bookingdate"  formControlName="bookingdate"><br><br>
+    <label>Customer Id</label> &nbsp;&nbsp;
+    <input type="number" name="customerid" formControlName="customerid">
+    <button type="button" onclick="fetchCustomer()" >Enter</button>
+    <br><br>
+    <label>Account Holder Name</label>&nbsp;&nbsp;
+    <input type="text" name="accountholdername" formControlName="accountholdername" ><br><br>
+    <label>Credit Balance</label>&nbsp;&nbsp;
+    <input type="number" name="creditbalance" formControlName="creditbalance"><br><br>
+    <label>Overdraft</label>&nbsp;&nbsp;
+    <input type="text" name="overdraft" formControlName="overdraft"><br>
+    <br>
+
+    <label>BIC</label> &nbsp;&nbsp;&nbsp;
+    <input type="text" name="BIC" formControlName="BIC">
+    <button type="button" onclick="fetchReceiver()">Enter</button><br><br>
+    
+    <label>Institution Name</label> &nbsp;&nbsp;&nbsp;
+    <input type="text" name="Instname" FormsControlName="Instname"><br><br>
+    
+    <label>Receiver Account Holder Name</label> &nbsp;&nbsp;&nbsp;
+    <input type="text" name="name " FormsControlName="name"><br><br>
+    
+    <label>Receiver Account Holder Number</label> &nbsp;&nbsp;&nbsp;
+    <input type="number" name="Account_no" FormsControlName="Account_no"><br><br>
+    
+    <label>Transfer Type</label> &nbsp;&nbsp;
+    <select name="type" FormsControlName="type">
+        <option value="customer">Customer-Non-hdfc</option>
+        <option value="Bank transfer">Bank Transfer-hdfc</option>
+        
+    </select><br><br>
+    
+    <label>Message code</label> &nbsp;&nbsp;
+    <select name="code" FormsControlName="code">
+     <option value ="CHQB">CHQB</option>
+     <option value ="CORT">CORT</option>
+     <option value ="HOLD">HOLD</option>
+     <option value ="INTC">INTC</option>
+     <option value ="PHOB">PHOB</option>
+     <option value ="PHOI">PHOI</option>
+     <option value ="PHON">PHON</option>
+     <option value ="REPA">REPA</option>
+     <option value ="SDVA">SDVA</option>
+    </select> <br><br>
+
+    <label>Amount</label> &nbsp;&nbsp;
+    <input type="number" name="amount" formContolName="amount"><br><br>
+    
+    <label >Add Transfer Fee</label> &nbsp;&nbsp;&nbsp;
+    <input type="number" name="Add_transfer_fee " formControlName="addtransferfee" onselect="calculate()"><br><br>
+    
+    <button type="submit">Submit</button>
+ </form>
+ 
