@@ -11,11 +11,11 @@ export class CustomerService {
   }
   public url:string="http://localhost:8282/customer"
   
-    public fetchCustomer(customerid:string):Observable<any>
+    public fetchCustomer(customerid:string):Observable<customer>
     {
        // return this.http.get('${this.url}/customer/${id}');
        
-       return this.http.get<any>(this.url+"/"+customerid);
+       return this.http.get<customer>(this.url+"/"+customerid);
     }
    
     
