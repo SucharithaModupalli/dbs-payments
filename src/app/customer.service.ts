@@ -15,7 +15,7 @@ export class CustomerService {
     {
        // return this.http.get('${this.url}/customer/${id}');
        
-       return this.http.get<any>(this.url+customerid);
+       return this.http.get<any>(this.url+"/"+customerid);
     }
    
     
