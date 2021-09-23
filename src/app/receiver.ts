@@ -1,5 +1,9 @@
 export class receiver{
-    constructor(public BIC:any, public Instname:any){
+    public BIC:any;
+    public Instname:any;
+    constructor(BIC:any,Instname:any){
+     this.BIC=BIC;
+     this.Instname=Instname;
         
     }
 }
