@@ -1,7 +1,6 @@
 package com.dbs.beans;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
 @Entity(name="receiver")
 public class receiver {
 	@Id
